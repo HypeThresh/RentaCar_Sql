@@ -55,7 +55,7 @@ public class alq_lista extends RecyclerView.Adapter<alq_lista.ViewHolder> {
 
             nombreC = itemView.findViewById(R.id.m);
             nombreV = itemView.findViewById(R.id.modelo);
-            id = itemView.findViewById(R.id.idAlquiler);
+            id = itemView.findViewById(R.id.);
             editar = itemView.findViewById(R.id.editarAlquilerFloat);
 
             editar.setOnClickListener(new View.OnClickListener() {
