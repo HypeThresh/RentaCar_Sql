@@ -5,129 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".gest_alq"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_marginHorizontal="30dp">
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="15sp"
-        android:text="Fecha de inicio:" />
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/fechaInicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="@string/seleccione_la_fecha_de_inicio"
+        android:hint="Seleccione fecha de inicio"
         android:inputType="date"
-        android:minHeight="48dp"
-        android:textColorHint="#78909C"
-        android:textSize="23sp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fechaFin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Seleccione fecha de fin"
+        android:inputType="date"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaInicio" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="15sp"
-        android:text="Fecha de fin:" />
-    <TextView
-        android:id="@+id/fechaFin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/seleccione_la_fecha_de_fin"
-        android:inputType="date"
-        android:minHeight="48dp"
-        android:textColorHint="#78909C"
-        android:textSize="23sp" />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="48dp"
+        android:text="Días:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaFin" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="15sp"
-        android:text="Tiempo de alquiler:" />
     <TextView
         android:id="@+id/tiempoAlquiler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/tiempo_de_alquiler"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="12dp"
+        android:hint="Días de alquiler"
         android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="#78909C"
-        android:textSize="23sp" />
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="15sp"
-        android:text="Precio de alquiler:" />
     <TextView
         android:id="@+id/precioAlquiler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/precio_de_alquiler"
-        android:textColorHint="#78909C"
-        android:textSize="23sp" />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="48dp"
+        android:hint="Precio de alquiler"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiempoAlquiler" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="15sp"
-        android:text="Vehículo:" />
     <Spinner
         android:id="@+id/idVehiculo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:spinnerMode="dropdown"
-        android:contentDescription="@string/seleccione_un_vehiculo"
-        android:textSize="23sp" />
+        android:layout_marginHorizontal="20dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="438dp" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="15sp"
-        android:text="Cliente:" />
     <Spinner
         android:id="@+id/idCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/seleccione_un_cliente"
-        android:minHeight="48dp" />
+        android:layout_marginHorizontal="20dp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="505dp" />
 
     <Button
-        android:id="@+id/registroAl"
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:padding="15dp"
-        android:backgroundTint="#06618A"
-        app:cornerRadius="15dp"
-        android:text="@string/registrar_alquiler" />
-
-    <Button
-        android:id="@+id/deleteAlquiler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:backgroundTint="#C10808"
-        app:cornerRadius="15dp"
-        android:visibility="invisible"
-        android:text="Eliminar" />
-
+        android:text="Button"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="598dp" />
 
 </LinearLayout>
