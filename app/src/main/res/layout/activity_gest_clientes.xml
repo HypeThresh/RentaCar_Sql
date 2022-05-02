@@ -7,4 +7,69 @@
     tools:context=".gest_clientes"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="N°. " />
+
+    <EditText
+        android:id="@+id/NombreClientetxt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:layout_marginBottom="25dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+
+        >
+
+        <Button
+            android:id="@+id/botonActulizarCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="editar"
+            app:cornerRadius="0dp"
+            android:layout_margin="2dp"
+            android:onClick="btonEditarCliente"/>
+
+        <Button
+            android:id="@+id/botonEliminarCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cornerRadius="0dp"
+            android:text="eliminar"
+            android:layout_margin="2dp"
+            android:onClick="btonEliminarCliente"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Vehículos alquilados:"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vehiculosDeUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"/>
+
 </LinearLayout>
