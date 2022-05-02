@@ -14,6 +14,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="52dp"
         android:ems="10"
+        android:textSize="20dp"
         android:hint="Seleccione fecha de inicio"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
         android:ems="10"
         android:hint="Seleccione fecha de fin"
         android:inputType="date"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +43,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="48dp"
         android:text="Días:"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +57,7 @@
         android:layout_marginTop="12dp"
         android:hint="Días de alquiler"
         android:inputType="number"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -66,9 +67,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="60dp"
         android:hint="Precio de alquiler"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiempoAlquiler" />
@@ -78,6 +79,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:layout_marginTop="60dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="438dp" />
 
@@ -86,14 +89,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="505dp" />
 
     <Button
-        android:id="@+id/button4"
+
+        android:id="@+id/btnRegistrarAql"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Registrar"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
         tools:layout_editor_absoluteX="160dp"
