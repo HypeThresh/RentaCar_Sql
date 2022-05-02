@@ -3,9 +3,13 @@ package com.example.rentacar_sql;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.rentacar_sql.base_datos.helperDB;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,5 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void createDB(){
+         helperDB helperDB = new helperDB(MainActivity.this);
+        SQLiteDatabase db = helperDB.getWritableDatabase();
+        if(db != null){
+            Toast.makeText(MainActivity.this, "Base de datos creada", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(MainActivity.this, "Error la crear la base de datos", Toast.LENGTH_SHORT).show();
+
+        }
     }
 }

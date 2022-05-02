@@ -1,9 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gest_alq">
+    tools:context=".gest_alq"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginHorizontal="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="15sp"
+        android:text="Fecha de inicio:" />
+
+    <TextView
+        android:id="@+id/fechaInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/seleccione_la_fecha_de_inicio"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="#78909C"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="15sp"
+        android:text="Fecha de fin:" />
+    <TextView
+        android:id="@+id/fechaFin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/seleccione_la_fecha_de_fin"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="#78909C"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="15sp"
+        android:text="Tiempo de alquiler:" />
+    <TextView
+        android:id="@+id/tiempoAlquiler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/tiempo_de_alquiler"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#78909C"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="15sp"
+        android:text="Precio de alquiler:" />
+    <TextView
+        android:id="@+id/precioAlquiler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/precio_de_alquiler"
+        android:textColorHint="#78909C"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="15sp"
+        android:text="Vehículo:" />
+    <Spinner
+        android:id="@+id/idVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        android:contentDescription="@string/seleccione_un_vehiculo"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:text="Cliente:" />
+    <Spinner
+        android:id="@+id/idCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/seleccione_un_cliente"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/registroAl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="15dp"
+        android:backgroundTint="#06618A"
+        app:cornerRadius="15dp"
+        android:text="@string/registrar_alquiler" />
+
+    <Button
+        android:id="@+id/deleteAlquiler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:backgroundTint="#C10808"
+        app:cornerRadius="15dp"
+        android:visibility="invisible"
+        android:text="Eliminar" />
+
+
+</LinearLayout>
