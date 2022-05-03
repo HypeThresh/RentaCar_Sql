@@ -19,7 +19,7 @@ public class helperDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE "+TABLA_ALQUILERES+"("+
+        sqLiteDatabase.execSQL("CREATE TABLE "+TABLA_VEHICULOS+"("+
                 "idVehiculo INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 "placa TEXT,"+
                 "tipo TEXT,"+
@@ -32,7 +32,7 @@ public class helperDB extends SQLiteOpenHelper {
                 "telefono TEXT,"+
                 "direccion TEXT)");
 
-        sqLiteDatabase.execSQL("CREATE TABLE "+TABLA_VEHICULOS+"("+
+        sqLiteDatabase.execSQL("CREATE TABLE "+TABLA_ALQUILERES+"("+
                 "idAlquiler INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 "fechaIni TEXT,"+
                 "fechFin TEXT,"+

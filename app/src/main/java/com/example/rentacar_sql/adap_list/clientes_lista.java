@@ -49,8 +49,8 @@ public class clientes_lista extends RecyclerView.Adapter<clientes_lista.clienteV
 
         public clienteViewHolder(@NonNull View itemView) {
             super(itemView);
-            verFB = itemView.findViewById(R.id.verFloatButton);
-            editarFb = itemView.findViewById(R.id.editarFloatButton);
+            verFB = itemView.findViewById(R.id.verFloatButtonClients);
+            editarFb = itemView.findViewById(R.id.editFloatButtonClients);
 
             viewNombre = itemView.findViewById(R.id.nombreCtxt);
             viewId = itemView.findViewById(R.id.idCtxt);

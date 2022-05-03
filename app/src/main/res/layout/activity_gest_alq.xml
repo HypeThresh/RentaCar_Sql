@@ -94,15 +94,28 @@
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="505dp" />
 
-    <Button
-
-        android:id="@+id/btnRegistrarAql"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="598dp" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:id="@+id/btnRegistrarAql"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Registrar" />
+
+        <Button
+
+            android:id="@+id/btnDelAlq"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Eliminar" />
+    </LinearLayout>
 
 </LinearLayout>

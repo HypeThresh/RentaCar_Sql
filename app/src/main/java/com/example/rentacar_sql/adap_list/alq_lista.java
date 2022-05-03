@@ -53,9 +53,9 @@ public class alq_lista extends RecyclerView.Adapter<alq_lista.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            nombreC = itemView.findViewById(R.id.m);
-            nombreV = itemView.findViewById(R.id.modelo);
-            id = itemView.findViewById(R.id.);
+            nombreC = itemView.findViewById(R.id.nombreC);
+            nombreV = itemView.findViewById(R.id.nombreV);
+            id = itemView.findViewById(R.id.idAlquiler);
             editar = itemView.findViewById(R.id.editarAlquilerFloat);
 
             editar.setOnClickListener(new View.OnClickListener() {
@@ -69,5 +69,4 @@ public class alq_lista extends RecyclerView.Adapter<alq_lista.ViewHolder> {
             });
         }
     }
-
 }

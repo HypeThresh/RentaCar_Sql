@@ -10,43 +10,43 @@ public class Alquiler {
     private String tiempoAlq;
     private String precio;
 
-    public int getIdA() {
+    public int getIdAlquiler() {
         return idAlquiler;
     }
 
-    public void setIdA(int idA) {
+    public void setIdAlquiler(int idA) {
         this.idAlquiler = idA;
     }
 
-    public int getIdC() {
+    public int getIdCliente() {
         return idCliente;
     }
 
-    public void setIdC(int idC) {
+    public void setIdCliente(int idC) {
         this.idCliente = idC;
     }
 
-    public int getIdV() {
+    public int getIdVehiculo() {
         return idVehiculo;
     }
 
-    public void setIdV(int idV) {
+    public void setIdVehiculo(int idV) {
         this.idVehiculo = idV;
     }
 
-    public String getFecchaInicio() {
+    public String getFechaIni() {
         return fechaIni;
     }
 
-    public void setFecchaInicio(String fecchaInicio) {
+    public void setFechaIni(String fecchaInicio) {
         this.fechaIni = fecchaInicio;
     }
 
-    public String getFecchaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
-    public void setFecchaFin(String fecchaFin) {
+    public void setFechaFin(String fecchaFin) {
         this.fechaFin = fecchaFin;
     }
 

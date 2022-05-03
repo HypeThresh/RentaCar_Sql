@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtDUI"
+        android:id="@+id/txtDUI2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNombres" />
 
     <EditText
-        android:id="@+id/txtTel"
+        android:id="@+id/txtTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -56,6 +56,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="12dp"
         android:text="agregar cliente"
+        android:onClick="agregarCliente"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
