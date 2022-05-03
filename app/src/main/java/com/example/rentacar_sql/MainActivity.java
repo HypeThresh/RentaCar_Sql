@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        createDB();
 
         admAlq = findViewById(R.id.btnGesAlq);
         admVhl = findViewById(R.id.btnGesVhcl);
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         admAlq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Adm_Alq.class);
+                Intent intent = new Intent(MainActivity.this, gest_alq.class);
                 startActivity(intent);
             }
         });

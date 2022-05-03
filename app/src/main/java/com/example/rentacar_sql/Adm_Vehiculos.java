@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 public class Adm_Vehiculos extends AppCompatActivity {
     public Button newVehiculo,findVehiculo;
+
     Spinner claveBusqueda;
     EditText valorBusqueda;
     public RecyclerView lista;
@@ -29,16 +30,16 @@ public class Adm_Vehiculos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adm_vehiculos);
-
         findVehiculo = findViewById(R.id.btnBuscarVehiculo);
         valorBusqueda = findViewById(R.id.txtBuscarVehiculo);
 
         lista = findViewById(R.id.listaVehiculos);
         lista.setLayoutManager(new LinearLayoutManager(this));
 
-        newVehiculo = findViewById(R.id.btnAddVehiculo);
+        newVehiculo = findViewById(R.id.newVehiculo);
 
         listaVehiculos = new ArrayList<>();
 

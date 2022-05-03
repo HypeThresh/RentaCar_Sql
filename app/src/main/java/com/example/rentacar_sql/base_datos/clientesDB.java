@@ -55,7 +55,6 @@ public class clientesDB extends helperDB {
                 cliente = new Clientes();
                 cliente.setId(cursorClientes.getInt(0));
                 cliente.setNombre(cursorClientes.getString(1));
-                cliente.setTelefono(cursorClientes.getString(2));
                 listaClientes.add(cliente);
             }while (cursorClientes.moveToNext());
 
@@ -75,7 +74,7 @@ public class clientesDB extends helperDB {
             helperDB dbhelper = new helperDB(context);
             SQLiteDatabase db = dbhelper.getWritableDatabase();
             cursor = db.rawQuery("SELECT alquileres.idAlquiler,alquileres.fechaIni,alquileres.fechaFin,alquileres.tiempoAlq,alquileres.precio,vehiculos.modelo,vehiculos.placa " +
-                    "as 'modelo',clientes.nombre as 'cliente' FROM alquileres INNER JOIN vehiculos  ON alquileres.idVehiculo = vehiculos.idVehiculo " +
+                    "as 'modelo',clientes.nombre as 'nombre' FROM alquileres INNER JOIN vehiculos  ON alquileres.idVehiculo = vehiculos.idVehiculo " +
                     "INNER JOIN clientes ON alquileres.idCliente = clientes.idCliente WHERE clientes.idCliente='"+idCliente+"'",null);
 
             if (cursor.moveToFirst()){
@@ -88,7 +87,7 @@ public class clientesDB extends helperDB {
 
                     vehi.setTiempoAlq(cursor.getString(3));
 
-                    vehi.setPrecio(cursor.getString(4));
+                    vehi.setPrecioAlquiler(cursor.getString(4));
 
                     vehi.setModelo(cursor.getString(5));
 
@@ -135,7 +134,7 @@ public class clientesDB extends helperDB {
 
             helperDB DBHelper = new helperDB(context);
             SQLiteDatabase db = DBHelper.getReadableDatabase();
-            cursorClientes = db.rawQuery("SELECT idC,nombre FROM "+TABLA_CLIENTES,null);
+            cursorClientes = db.rawQuery("SELECT idCliente,nombre FROM "+TABLA_CLIENTES,null);
 
             if(cursorClientes.moveToFirst()){
                 do{
@@ -161,7 +160,7 @@ public class clientesDB extends helperDB {
         Clientes cliente =null;
         Cursor cursorClientes;
 
-        cursorClientes = db.rawQuery("SELECT * FROM "+TABLA_CLIENTES + " WHERE idc = "+idc + " LIMIT 1",null);
+        cursorClientes = db.rawQuery("SELECT * FROM "+TABLA_CLIENTES + " WHERE idCliente = "+idc+ " LIMIT 1",null);
         if (cursorClientes.moveToFirst()){
 
             cliente = new Clientes();
@@ -179,7 +178,7 @@ public class clientesDB extends helperDB {
         SQLiteDatabase db = dbhelper.getWritableDatabase();
 
         try{
-            db.execSQL("UPDATE " + TABLA_CLIENTES + " SET nombre='" +nombre+ "' WHERE idc='"+id+"' ");
+            db.execSQL("UPDATE " + TABLA_CLIENTES + " SET nombre='" +nombre+ "' WHERE idCliente='"+id+"' ");
             encontrado = true;
         }catch (Exception ex){
             ex.toString();
@@ -195,16 +194,13 @@ public class clientesDB extends helperDB {
         helperDB dbhelper = new helperDB(context);
         SQLiteDatabase db = dbhelper.getWritableDatabase();
         try{
-            db.execSQL("DELETE FROM "+TABLA_CLIENTES+" WHERE idc = '"+id+"'");
+            db.execSQL("DELETE FROM "+TABLA_CLIENTES+" WHERE idCliente = '"+id+"'");
             encontrado = true;
         }catch (Exception ex){
             ex.toString();
         }finally {
             db.close();
         }
-
-
         return encontrado;
-
     }
 }

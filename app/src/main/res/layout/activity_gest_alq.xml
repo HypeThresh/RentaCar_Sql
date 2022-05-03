@@ -75,21 +75,23 @@
         app:layout_constraintTop_toBottomOf="@+id/tiempoAlquiler" />
 
     <Spinner
-        android:id="@+id/idVehiculo"
+        android:id="@+id/idVehiculoSp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:textSize="20dp"
+        android:contentDescription="@string/seleccione_un_vehiculo"
         android:layout_marginTop="60dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="438dp" />
 
     <Spinner
-        android:id="@+id/idCliente"
+        android:id="@+id/idClienteSp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:textSize="20dp"
+        android:contentDescription="@string/seleccione_un_cliente"
         android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="505dp" />
@@ -107,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Registrar" />
+            android:text="@string/registrar_alquiler"  />
 
         <Button
 
@@ -115,6 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:visibility="invisible"
             android:text="Eliminar" />
     </LinearLayout>
 

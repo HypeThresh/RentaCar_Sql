@@ -28,9 +28,7 @@ public class helperDB extends SQLiteOpenHelper {
 
         sqLiteDatabase.execSQL("CREATE TABLE "+TABLA_CLIENTES+"("+
                 "idCliente INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                "nombre TEXT,"+
-                "telefono TEXT,"+
-                "direccion TEXT)");
+                "nombre TEXT)");
 
         sqLiteDatabase.execSQL("CREATE TABLE "+TABLA_ALQUILERES+"("+
                 "idAlquiler INTEGER PRIMARY KEY AUTOINCREMENT,"+
@@ -40,8 +38,8 @@ public class helperDB extends SQLiteOpenHelper {
                 "precio REAL,"+
                 "idVehiculo INTEGER,"+
                 "idCliente INTEGER,"+
-                "FOREIGN KEY(idV) REFERENCES vehiculos(idVehiculo),"+
-                "FOREIGN KEY(idC) REFERENCES clientes(idCliente))");
+                "FOREIGN KEY(idVehiculo) REFERENCES vehiculos(idVehiculo),"+
+                "FOREIGN KEY(idCliente) REFERENCES clientes(idCliente))");
 
     }
 

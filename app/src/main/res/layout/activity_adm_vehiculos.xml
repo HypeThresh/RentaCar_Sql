@@ -16,6 +16,7 @@
         android:ems="10"
         android:hint="Ingresar placa del vehículo"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +40,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtBuscarVehiculo" />
 
         <Button
-            android:id="@+id/btnAddVehiculo"
+            android:id="@+id/newVehiculo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

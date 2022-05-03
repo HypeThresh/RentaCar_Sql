@@ -32,10 +32,7 @@ public class vehiculo_clientes_lista extends RecyclerView.Adapter<vehiculo_clien
         holder.vInicio.setText(listaCCvehiculos.get(position).getFechaIni());
         holder.vFinal.setText(listaCCvehiculos.get(position).getFechFin());
         holder.vTiempo.setText(listaCCvehiculos.get(position).getTiempoAlq()+" Dias");
-        holder.vPrecio.setText("$ "+listaCCvehiculos.get(position).getPrecio());
-
-
-
+        holder.vPrecio.setText("$ "+listaCCvehiculos.get(position).getPrecioAlquiler());
 
 
     }

@@ -52,7 +52,7 @@ public class AlqDB extends helperDB{
 
             helperDB DBHelper = new helperDB(context);
             SQLiteDatabase db = DBHelper.getReadableDatabase();
-            cursorVehiculos = db.rawQuery("SELECT alquileres.idA,vehiculos.nombre as \"modelo\",clientes.nombre as \"cliente\" FROM alquileres INNER JOIN vehiculos  ON alquileres.idV = vehiculos.idV INNER JOIN clientes ON alquileres.idC = clientes.idC",null);
+            cursorVehiculos = db.rawQuery("SELECT alquileres.idAlquiler,vehiculos.modelo as \"modelo\",clientes.nombre as \"nombre\" FROM alquileres INNER JOIN vehiculos  ON alquileres.idVehiculo = vehiculos.idVehiculo INNER JOIN clientes ON alquileres.idCliente = clientes.idCliente",null);
 
             if(cursorVehiculos.moveToFirst()){
                 do{
@@ -99,7 +99,7 @@ public class AlqDB extends helperDB{
         cursorAlquiler.close();
         return  al;
     }
-    public boolean updateAlquiler(int id,String fechaInicio, String fechaFin,String tiempoAlquiler,String precioAlquiler,String idV,String idC){
+    public boolean updateAlquiler(int id,String fechaIni, String fechaFin,String tiempoAlq,String precio,String idVehiculo,String idCliente){
         boolean updated = false;
 
         try{
@@ -107,14 +107,14 @@ public class AlqDB extends helperDB{
             SQLiteDatabase db = DBHelper.getReadableDatabase();
 
             ContentValues values= new ContentValues();
-            values.put("fechaInicio",fechaInicio);
+            values.put("fechaInicio",fechaIni);
             values.put("fechaFin",fechaFin);
-            values.put("tiempoAlquiler",tiempoAlquiler);
-            values.put("precioAlquiler",precioAlquiler);
-            values.put("idVehiculo",idV);
-            values.put("idCliente",idC);
+            values.put("tiempoAlquiler",tiempoAlq);
+            values.put("precioAlquiler",precio);
+            values.put("idVehiculo",idVehiculo);
+            values.put("idCliente",idCliente);
 
-            db.update(TABLA_ALQUILERES,values,"idA = "+id,null);
+            db.update(TABLA_ALQUILERES,values,"idAlquiler = "+id,null);
             updated=true;
             db.close();
         }catch (Exception e){

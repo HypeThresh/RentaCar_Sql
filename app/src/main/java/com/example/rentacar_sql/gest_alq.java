@@ -56,8 +56,8 @@ public class gest_alq extends AppCompatActivity {
         fechaFin = findViewById(R.id.fechaFin);
         tiempoAlquiler = findViewById(R.id.tiempoAlquiler);
         precioAlquiler = findViewById(R.id.precioAlquiler);
-        idVehiculo = findViewById(R.id.idVehiculo);
-        idCliente = findViewById(R.id.idCliente);
+        idVehiculo = findViewById(R.id.idVehiculoSp);
+        idCliente = findViewById(R.id.idClienteSp);
         delete = findViewById(R.id.btnDelAlq);
 
         Calendar calendar = Calendar.getInstance();
@@ -115,7 +115,7 @@ public class gest_alq extends AppCompatActivity {
                 datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 datePickerDialog.show();
 
-                ;
+
             }
         });
 
@@ -323,7 +323,7 @@ public class gest_alq extends AppCompatActivity {
 
         if (tiempo != 0) {
             vehiculosDB db = new vehiculosDB(gest_alq.this);
-            Vehiculos datos = db.findVehiculo("idV", String.valueOf(id));
+            Vehiculos datos = db.findVehiculo("idVehiculo", String.valueOf(id));
             int precio = 0;
 
             if (datos != null) {

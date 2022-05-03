@@ -8,15 +8,15 @@ public class Vehiculos_Clientes {
     private String fechaIni;
     private String fechaFin;
     private String tiempoAlq;
-    private String precio;
+    private String precioAlquiler;
 
 
-    public int getIdV() {
+    public int getIdVehiculo() {
         return idVehiculo;
     }
 
-    public void setIdV(int idV) {
-        this.idVehiculo = idV;
+    public void setIdVehiculo(int idVehiculo) {
+        this.idVehiculo = idVehiculo;
     }
 
     public String getPlaca() {
@@ -36,6 +36,7 @@ public class Vehiculos_Clientes {
     public String getFechaIni() {
         return fechaIni;
     }
+
     public void setFechaIni(String fechaIni) {
         this.fechaIni = fechaIni;
     }
@@ -44,7 +45,7 @@ public class Vehiculos_Clientes {
         return fechaFin;
     }
 
-    public void setFechFin(String fecchaFin) { this.fechaFin = fechaFin;}
+    public void setFechFin(String fechaFin) { this.fechaFin = fechaFin;}
 
     public String getTiempoAlq() {
         return tiempoAlq;
@@ -54,12 +55,12 @@ public class Vehiculos_Clientes {
         this.tiempoAlq = tiempoAlq;
     }
 
-    public String getPrecio() {
-        return precio;
+    public String getPrecioAlquiler() {
+        return precioAlquiler;
     }
 
-    public void setPrecio(String precio) {
-        this.precio = precio;
+    public void setPrecioAlquiler(String precioAlquiler) {
+        this.precioAlquiler = precioAlquiler;
     }
 
 }

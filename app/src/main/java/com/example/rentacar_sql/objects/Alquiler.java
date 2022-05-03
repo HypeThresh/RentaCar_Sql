@@ -8,7 +8,7 @@ public class Alquiler {
     private String fechaIni;
     private String fechaFin;
     private String tiempoAlq;
-    private String precio;
+    private String precioAlquiler;
 
     public int getIdAlquiler() {
         return idAlquiler;
@@ -59,11 +59,11 @@ public class Alquiler {
     }
 
     public String getPrecioAlquiler() {
-        return precio;
+        return precioAlquiler;
     }
 
     public void setPrecioAlquiler(String precioAlquiler) {
-        this.precio = precioAlquiler;
+        this.precioAlquiler = precioAlquiler;
     }
 
 }

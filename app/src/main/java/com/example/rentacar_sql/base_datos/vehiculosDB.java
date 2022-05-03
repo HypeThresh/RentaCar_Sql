@@ -20,7 +20,7 @@ public class vehiculosDB extends helperDB{
         this.context = context;
     }
 
-    public long createVehiculo(String placa, String tipo, String estado,String nombre){
+    public long createVehiculo(String placa, String tipo, String estado,String modelo){
         long id=0;
 
         try{
@@ -31,7 +31,7 @@ public class vehiculosDB extends helperDB{
             values.put("placa",placa);
             values.put("tipo",tipo);
             values.put("estado",estado);
-            values.put("nombre",nombre);
+            values.put("modelo",modelo);
 
             id = db.insert(TABLA_VEHICULOS,null,values);
             db.close();
@@ -137,7 +137,7 @@ public class vehiculosDB extends helperDB{
             values.put("estado",estado);
             values.put("modelo",modelo);
 
-            db.update(TABLA_VEHICULOS,values,"idV=?",new String[]{String.valueOf(id)});
+            db.update(TABLA_VEHICULOS,values,"idVehiculo=?",new String[]{String.valueOf(id)});
             updated = true;
         }catch (Exception e){
             updated = false;
@@ -171,13 +171,13 @@ public class vehiculosDB extends helperDB{
     }
 
     public boolean deleteVehiculo(int id){
-        helperDB DBHelper = new helperDB(context);
-        SQLiteDatabase db = DBHelper.getReadableDatabase();
+        helperDB helperDB = new helperDB(context);
+        SQLiteDatabase db = helperDB.getReadableDatabase();
 
         boolean removed = false;
 
         try{
-            db.delete(TABLA_VEHICULOS,"idV=?",new String[]{String.valueOf(id)});
+            db.delete(TABLA_VEHICULOS,"idVehiculo=?",new String[]{String.valueOf(id)});
             removed = true;
         }catch (Exception e){
             removed = false;
